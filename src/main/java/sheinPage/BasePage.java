@@ -39,11 +39,11 @@ public class BasePage {
 		return new HomePage(pageDriver);
 	}
 	
-//	public void signOut()
-//	{
-//		Actions act = new Actions(pageDriver);
-//		act.moveToElement(options).perform();
-//	}
+	public void signOut()
+	{
+		Actions act = new Actions(pageDriver);
+		act.moveToElement(options).perform();
+	}
 	
 	}
 	
