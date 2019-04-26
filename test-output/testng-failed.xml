@@ -3,13 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sheinTest.SearrchresultTest">
+      <class name="sheinTest.HomeTest">
         <methods>
           <include name="afterClass"/>
-          <include name="verifySelectItem" invocation-numbers="1"/>
+          <include name="verifyloinbutton"/>
+          <include name="returntoHomePage"/>
+          <include name="verifymenuoption"/>
+          <include name="verifyloginpage"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- sheinTest.SearrchresultTest -->
+      </class> <!-- sheinTest.HomeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

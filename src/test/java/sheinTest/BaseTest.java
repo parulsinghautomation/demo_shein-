@@ -44,7 +44,7 @@ public class BaseTest {
 	@AfterMethod
 	public void returntoHomePage() throws Exception
 	{
-	    homePage= basePage.returntoHomePage();
+	    homePage.returntoHomePage();
 	       
 	 }
 	

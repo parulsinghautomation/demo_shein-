@@ -6,11 +6,47 @@
       <class name="sheinTest.CartTest">
         <methods>
           <include name="verifyItemIsRemoved"/>
-          <include name="closebrowser"/>
+          <include name="afterClass"/>
           <include name="verifyItemAddedToCart"/>
-          <include name="setSuite"/>
+          <include name="returntoHomePage"/>
+          <include name="beforeClass"/>
         </methods>
       </class> <!-- sheinTest.CartTest -->
+      <class name="sheinTest.SearrchresultTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="returntoHomePage"/>
+          <include name="verifySelectItem"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- sheinTest.SearrchresultTest -->
+      <class name="sheinTest.HomeTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="verifyloinbutton"/>
+          <include name="returntoHomePage"/>
+          <include name="verifymenuoption"/>
+          <include name="verifyloginpage"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- sheinTest.HomeTest -->
+      <class name="sheinTest.LoginTest">
+        <methods>
+          <include name="verifyloginpagetitle"/>
+          <include name="verifyvalidlogin"/>
+          <include name="afterClass"/>
+          <include name="returntoHomePage"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- sheinTest.LoginTest -->
+      <class name="sheinTest.DashBoardTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="verifysubmitsearch"/>
+          <include name="returntoHomePage"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- sheinTest.DashBoardTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
