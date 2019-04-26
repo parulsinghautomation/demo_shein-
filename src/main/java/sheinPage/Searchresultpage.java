@@ -11,6 +11,10 @@ public class Searchresultpage extends BasePage{
 
 	public Searchresultpage(WebDriver driver) {
 		super(driver);
+		if (!driver.getTitle().contains("Search"))
+		{
+		      throw new IllegalStateException("Not on Search page");
+		 }
 		WebDriverWait wait = new WebDriverWait(driver, 100);
 		wait.until(ExpectedConditions.visibilityOf(product));
 		

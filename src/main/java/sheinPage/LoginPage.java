@@ -11,6 +11,10 @@ public class LoginPage extends BasePage  {
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
+		if (!driver.getTitle().contains("Sign In"))
+		{
+		      throw new IllegalStateException("Not on Sign In page");
+		 }
 	}
 	
 	@FindBy(xpath="//div[@class='j-login-con col-xs-3 col-xs-offset-2']//input[@name='email']")

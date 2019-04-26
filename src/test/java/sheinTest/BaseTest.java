@@ -41,8 +41,13 @@ public class BaseTest {
 		homePage = new HomePage(testDriver);
 	}
 	
+	@AfterMethod
+	public void returntoHomePage() throws Exception
+	{
+	    homePage= basePage.returntoHomePage();
+	       
+	 }
 	
-
 	@AfterClass
 	public void afterClass()
 	{

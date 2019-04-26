@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.Select;
 
 
 
@@ -19,13 +20,17 @@ public class BasePage {
 	@FindBy(xpath = "//i[@class='iconfont-critical icon-yonghuicon-']")
 	protected WebElement options;
 	
+	@FindBy(xpath="//a[contains(@href,'logout')]")
+	protected WebElement logout;
+	
 	public BasePage(WebDriver driver)
 	{
 		pageDriver= driver;
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 25), this);
 	}
 
-	public void javascriptClick(WebElement element) {
+	public void javascriptClick(WebElement element)
+	{
 		try {
 		JavascriptExecutor executor = (JavascriptExecutor)pageDriver;
 		executor.executeScript("arguments[0].click();", element);}
@@ -34,15 +39,10 @@ public class BasePage {
 		}
 	}
 	
-	public HomePage returntoHomePage() {
+	public HomePage returntoHomePage() 
+	{
 		sheinlogo.click();
 		return new HomePage(pageDriver);
-	}
-	
-	public void signOut()
-	{
-		Actions act = new Actions(pageDriver);
-		act.moveToElement(options).perform();
 	}
 	
 	}

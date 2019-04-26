@@ -4,10 +4,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
+
 public class CartPage extends BasePage{
 
 	public CartPage(WebDriver driver) {
 		super(driver);
+		 if (!driver.getTitle().contains("Shopping Bag")){
+		      throw new IllegalStateException("Not on cart page");
+		    }
 		}
 	
 	@FindBy(xpath="//a[contains(@href,'375255')]")
@@ -25,6 +29,9 @@ public class CartPage extends BasePage{
 	
 	@FindBy(xpath="//a[@class='right-link j-continue-shopping']")
 	protected WebElement continueShopLink;
+	
+	@FindBy(xpath="//a[contains(@href,'logout')]")
+	protected WebElement logout;
 	
 	public boolean isCorrectItemAdded()
 	

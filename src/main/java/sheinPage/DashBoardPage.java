@@ -12,6 +12,10 @@ public class DashBoardPage extends BasePage {
 		super(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 200);
 		wait.until(ExpectedConditions.visibilityOf(signoutbutton));
+		if (!driver.getCurrentUrl().contains("https://www.shein.in/user/index"))
+		{
+		      throw new IllegalStateException("Not on DashBoard page");
+		 }
 		// TODO Auto-generated constructor stub
 	}
 

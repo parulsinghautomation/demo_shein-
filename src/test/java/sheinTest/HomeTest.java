@@ -1,6 +1,5 @@
 package sheinTest;
-
-
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
@@ -10,20 +9,20 @@ public class HomeTest extends BaseTest {
 	@Test
 	public void verifycompanylogo()
 	{
-		homePage.islogopresent();
+		Assert.assertTrue(homePage.islogopresent());
 		
 	}
 	
 	@Test
 	public void verifyloinbutton()
 	{
-		homePage.isloginpresent();		
+		Assert.assertTrue(homePage.isloginpresent());
 	}
 	
 	@Test
 	public void verifymenuoption()
 	{
-		homePage.Verifyoptions();
+		Assert.assertTrue(homePage.verifyOptions());
 	}
 	
 	@Test
