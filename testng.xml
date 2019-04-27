@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test  name="Test">
+<listeners>
+<listener class-name ="sheinUtility.ExtentReportListener"/>
+</listeners>
+
+  <test  name="SheinTestResults">
     <classes>
       <class name="sheinTest.HomeTest"/>
       <class name="sheinTest.LoginTest"/>

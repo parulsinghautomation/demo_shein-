@@ -26,7 +26,7 @@ public class HomePage extends BasePage{
 	@FindBy(xpath ="//*[@class='iconfont-critical icon-sheinlogo']")
 	protected WebElement HomeLogo;
 	
-	@FindBy(xpath = "//*[@class='iconfont-critical icon-yonghuicon-']")
+	@FindBy(xpath = "//i[@class='iconfont-critical icon-yonghuicon-']")
 	protected WebElement LoginButton;
 	
 	@FindBy(xpath = "//i[@class='iconfont-critical icon-yonghuicon-']")

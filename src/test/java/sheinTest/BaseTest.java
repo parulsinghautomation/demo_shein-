@@ -5,16 +5,18 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.*;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import sheinManager.configManager;
 import sheinPage.BasePage;
 import sheinPage.CartPage;
 import sheinPage.AccountPage;
 import sheinPage.HomePage;
 import sheinPage.LoginPage;
 import sheinPage.Searchresultpage;
+import sheinUtility.WebEventListener;
+import sheinUtility.configManager;
 
 
 public class BaseTest {
@@ -38,6 +40,11 @@ public class BaseTest {
 		WebDriverManager.chromedriver().setup();
 		//System.setProperty("webdriver.chrome.driver","C:\\Users\\parul.singh\\eclipse-workspace\\chromedriver.exe");
 		testDriver = new ChromeDriver(options);	
+		EventFiringWebDriver event_driver = new EventFiringWebDriver(testDriver);
+		WebEventListener eventlistner = new WebEventListener(event_driver);
+		event_driver.register(eventlistner);
+		testDriver = event_driver;	
+		
 		testDriver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
 		testDriver.manage().window().maximize();
 		testDriver.get(configManager.property.getProperty("url"));;

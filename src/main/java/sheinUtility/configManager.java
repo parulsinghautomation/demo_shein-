@@ -1,4 +1,4 @@
-package sheinManager;
+package sheinUtility;
 
 import java.io.FileReader;
 import java.util.Properties;

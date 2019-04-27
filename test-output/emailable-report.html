@@ -8,11 +8,58 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">97,667</td><td></td><td></td></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">SheinTestResults</a></td><td class="num">9</td><td class="num">0</td><td class="num attn">1</td><td class="num">419,818</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">sheinTest.HomeTest</td><td><a href="#m0">verifyHomePageDetails</a></td><td rowspan="1">1556355363080</td><td rowspan="1">2800</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SheinTestResults &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">sheinTest.HomeTest</td><td><a href="#m0">verifyHomePageDetails</a></td><td rowspan="1">1556366476275</td><td rowspan="1">75402</td></tr><tr><th colspan="4">SheinTestResults &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">sheinTest.AccountTest</td><td><a href="#m1">verifyAcoountLink</a></td><td rowspan="1">1556366641030</td><td rowspan="1">8035</td></tr><tr class="passedodd"><td rowspan="4">sheinTest.CartTest</td><td><a href="#m2">verifyItemAddedToCart</a></td><td rowspan="2">1556366800037</td><td rowspan="2">18414</td></tr><tr class="passedodd"><td><a href="#m3">verifyItemAddedToCart</a></td></tr><tr class="passedodd"><td><a href="#m4">verifyItemIsRemoved</a></td><td rowspan="2">1556366839105</td><td rowspan="2">9845</td></tr><tr class="passedodd"><td><a href="#m5">verifyItemIsRemoved</a></td></tr><tr class="passedeven"><td rowspan="2">sheinTest.LoginTest</td><td><a href="#m6">verifyloginpagetitle</a></td><td rowspan="1">1556366592079</td><td rowspan="1">2348</td></tr><tr class="passedeven"><td><a href="#m7">verifyvalidlogin</a></td><td rowspan="1">1556366596879</td><td rowspan="1">4401</td></tr><tr class="passedodd"><td rowspan="2">sheinTest.SearrchresultTest</td><td><a href="#m8">verifyItemSearched</a></td><td rowspan="2">1556366697365</td><td rowspan="2">7371</td></tr><tr class="passedodd"><td><a href="#m9">verifyItemSearched</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">sheinTest.HomeTest#verifyHomePageDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>SheinTestResults</h2><h3 id="m0">sheinTest.HomeTest#verifyHomePageDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Timed out after 25 seconds. Unable to locate the element
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:99)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at sheinPage.HomePage.islogopresent(HomePage.java:37)
+	at sheinTest.HomeTest.verifyHomePageDetails(HomeTest.java:11)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;iconfont-critical icon-sheinlogo-----&apos;]&quot;}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;NDI-LAP-591&apos;, ip: &apos;192.168.1.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\PARUL~1.SIN\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61105}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.108, webStorageEnabled: true}
+Session ID: 6e172ee9881ab2a9a62a8d09c0c01d52
+*** Element info: {Using=xpath, value=//*[@class=&apos;iconfont-critical icon-sheinlogo-----&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+	at com.sun.proxy.$Proxy9.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:72)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)
+	... 29 more
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">sheinTest.AccountTest#verifyAcoountLink</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">sheinTest.CartTest#verifyItemAddedToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>654595</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">sheinTest.CartTest#verifyItemAddedToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>375255</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">sheinTest.CartTest#verifyItemIsRemoved</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>654595</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">sheinTest.CartTest#verifyItemIsRemoved</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>375255</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">sheinTest.LoginTest#verifyloginpagetitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">sheinTest.LoginTest#verifyvalidlogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">sheinTest.SearrchresultTest#verifyItemSearched</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>375255</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">sheinTest.SearrchresultTest#verifyItemSearched</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>654595</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

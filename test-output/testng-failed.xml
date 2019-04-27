@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="sheinUtility.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="SheinTestResults(failed)">
     <classes>
-      <class name="sheinTest.CartTest">
+      <class name="sheinTest.HomeTest">
         <methods>
-          <include name="verifyItemIsRemoved"/>
           <include name="afterClass"/>
-          <include name="verifyItemAddedToCart"/>
           <include name="returntoHomePage"/>
-          <include name="verifySearchItem"/>
+          <include name="verifyHomePageDetails"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- sheinTest.CartTest -->
+      </class> <!-- sheinTest.HomeTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- SheinTestResults(failed) -->
+</suite> <!-- Failed suite [Suite] -->
