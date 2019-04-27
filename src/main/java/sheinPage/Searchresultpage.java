@@ -1,5 +1,4 @@
 package sheinPage;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,13 +29,13 @@ public class Searchresultpage extends BasePage{
 	@FindBy(xpath="//i[@class='iconfont-critical icon-tubiaozhizuomoban header2-icon-search']")
 	protected WebElement submitsearch;
 	
-	@FindBy(xpath ="//button[contains(@class,'btn-add-to-bag-375255')]")
+	@FindBy(xpath ="//button[contains(@class,'btn-add-to-bag')]")
 	protected WebElement item;
 	
 	@FindBy(xpath ="//label[3]//span[1]")
 	protected WebElement size;
 	
-	@FindBy(xpath ="//button[contains(@class,'add-bag-submit-375255')]")
+	@FindBy(xpath ="//button[contains(@class,'add-bag-submit')]")
 	protected WebElement selectitem;
 	
 	
@@ -49,6 +48,29 @@ public class Searchresultpage extends BasePage{
 	
 	@FindBy(xpath ="//i[contains(@class,'iconfont-critical icon-gouwudai')]")
 	protected WebElement Cartbutton;
+	
+
+	@FindBy(xpath ="//a[@data-id]")
+	private WebElement results;
+	
+	
+   public boolean isSeachedItem(String item) {
+	   boolean found = false;
+	   {
+		   if( results.getAttribute("data-id").contains(item))
+		   {
+			System.out.println(item + "Found");   
+			 return true;
+		   }
+		   
+	   }
+	   if(!found) {
+		   
+		   System.out.println("Item not found in search");
+		   
+	   }
+	   return found;
+   }
 	
 	
 	public void searchItem(String itemID)
@@ -66,15 +88,12 @@ public class Searchresultpage extends BasePage{
 		item.click();
 		size.click();
 		selectitem.click();
-		System.out.println("Item submitted");
-		
 	}
 
 	public CartPage navigateToCart()
 	{
 		Cartbutton.click();
 		return new CartPage(pageDriver);
-		
 	}
 		
 }

@@ -6,21 +6,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class DashBoardPage extends BasePage {
+public class AccountPage extends BasePage {
 
-	public DashBoardPage(WebDriver driver) {
+	public AccountPage(WebDriver driver) {
 		super(driver);
 		WebDriverWait wait = new WebDriverWait(driver, 200);
 		wait.until(ExpectedConditions.visibilityOf(signoutbutton));
 		if (!driver.getCurrentUrl().contains("https://www.shein.in/user/index"))
 		{
-		      throw new IllegalStateException("Not on DashBoard page");
+		      throw new IllegalStateException("Not on Account page");
 		 }
 		// TODO Auto-generated constructor stub
 	}
 
-	@FindBy(xpath="//input[@type='search']")
-	protected WebElement search;
+	@FindBy(xpath="//a[contains(text(),'My ACCOUNT')]")
+	protected WebElement myaccount;
 	
 	@FindBy(xpath="//i[@class='iconfont-critical icon-tubiaozhizuomoban header2-icon-search']")
 	protected WebElement submitsearch;
@@ -29,8 +29,12 @@ public class DashBoardPage extends BasePage {
 	@FindBy(xpath="//a[@class='she-btn-white']")
 	protected WebElement signoutbutton;
 	
+	public boolean isAccountLinkPresent()
+	{
+		return myaccount.isDisplayed();
+	}
 	
-	public Searchresultpage search()
+	public Searchresultpage searchButton()
 	{
 		
 		submitsearch.click();

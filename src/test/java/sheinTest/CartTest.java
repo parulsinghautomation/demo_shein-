@@ -1,37 +1,46 @@
 package sheinTest;
 
 
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertTrue;
+import org.testng.Assert;
 
 public class CartTest extends BaseTest{
 	
-	@Test
-	public void verifyItemAddedToCart()
+	@BeforeClass
+	public void verifySearchItem()
 	{
 		loginPage=homePage.clickloginbutton();
-		dashBoardPage=loginPage.validlogin();
-        searchresultpage= dashBoardPage.search();
-		searchresultpage.addtocart();
-		cartpage=searchresultpage.navigateToCart();
-		if(cartpage.isCorrectItemAdded())
-		{
-			assertTrue(true);
-		}
-		else
-		{
-			assertTrue(false);
-			System.out.println("cart Item not matched");
-			
-		}
+		accountPage=loginPage.validlogin();
+        searchresultpage= accountPage.searchButton();
 	}
 	
-	@Test(dependsOnMethods = { "verifyItemAddedToCart" })
-	public void verifyItemIsRemoved()
+	@DataProvider
+	public String[] itemID()
 	{
-		cartpage.removeItemfromCart();
+		String itemId = "375255";
+		String itemId1 = "654595";
 		
+	return new String[] {itemId,itemId1};
+	}
+	
+	@Test(dataProvider="itemID")
+	public void verifyItemAddedToCart(String itemID)
+	{
+		searchresultpage.searchItem(itemID);
+		searchresultpage.addtocart();
+		cartpage=searchresultpage.navigateToCart();
+		Assert.assertTrue(cartpage.isItemAddedinCart(itemID), "Selected item is not present in the cart");
+		cartpage.continueShopping();
+	}
+	
+	@Test (dependsOnMethods = { "verifyItemAddedToCart" }, dataProvider="itemID")
+	public void verifyItemIsRemoved(String itemID)
+	{
+		homePage.navigateToCart();
+		Assert.assertTrue(cartpage.removeItemfromCart(),"Item not removed from cart");
+		cartpage.continueShopping();
 	}
 	
 }

@@ -3,12 +3,9 @@ package sheinPage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.ui.Select;
-
 
 
 public class BasePage {
@@ -23,6 +20,12 @@ public class BasePage {
 	@FindBy(xpath="//a[contains(@href,'logout')]")
 	protected WebElement logout;
 	
+
+	@FindBy(xpath ="//i[contains(@class,'iconfont-critical icon-gouwudai')]")
+	protected WebElement Cartbutton;
+	
+	
+	//Initializing the Page objects
 	public BasePage(WebDriver driver)
 	{
 		pageDriver= driver;
@@ -39,6 +42,12 @@ public class BasePage {
 		}
 	}
 	
+	public CartPage navigateToCart()
+	{
+		Cartbutton.click();
+		return new CartPage(pageDriver);
+		
+	}
 	public HomePage returntoHomePage() 
 	{
 		sheinlogo.click();

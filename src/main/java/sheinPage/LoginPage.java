@@ -11,7 +11,7 @@ public class LoginPage extends BasePage  {
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
-		if (!driver.getTitle().contains("Sign In"))
+		if (!driver.getTitle().contains("Sign"))
 		{
 		      throw new IllegalStateException("Not on Sign In page");
 		 }
@@ -28,12 +28,12 @@ public class LoginPage extends BasePage  {
 	protected WebElement Submitbutton;
 	
 
-	public DashBoardPage validlogin()
+	public AccountPage validlogin()
 	{
 		Username.sendKeys(configManager.property.getProperty("username"));
 		Password.sendKeys(configManager.property.getProperty("password"));
 		Submitbutton.click();
-		return new DashBoardPage(pageDriver);
+		return new AccountPage(pageDriver);
 	
 	}
 

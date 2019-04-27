@@ -1,4 +1,7 @@
 package sheinPage;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,22 +36,44 @@ public class CartPage extends BasePage{
 	@FindBy(xpath="//a[contains(@href,'logout')]")
 	protected WebElement logout;
 	
+	
+	@FindBy(xpath ="//table/tbody/tr[@sku]")
+	private List<WebElement> results;
+	
+	protected String resultUrl="./td/div[2]/div/a";
+	
+	
+   public boolean isItemAddedinCart(String item) {
+	   boolean found = false;
+	   for(WebElement eachresult :  results ){
+		   if(eachresult.findElement(By.xpath(resultUrl)).getAttribute("href").contains(item)){
+			 return true;
+		   }
+		   
+	   }
+	   if(!found) {
+		   
+	   }
+	   return found;
+   }
+	
 	public boolean isCorrectItemAdded()
 	
 	{
 		return cartItemlink.isDisplayed();
 	}
 	
-	public void removeItemfromCart()
+	public void continueShopping()
 	{
-		
+		javascriptClick(continueShopLink);
+	}
+	
+	public boolean removeItemfromCart()
+	{
 		deleteButton.click();
 		javascriptClick(yesButton);
-		javascriptClick(continueShopLink);
-	
-
+		return true;
 	}
 }
-
 
 	

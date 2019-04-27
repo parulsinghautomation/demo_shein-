@@ -23,7 +23,7 @@ public class LoginTest extends BaseTest {
 	public void verifyvalidlogin() throws IOException
 	{
 		loginPage=homePage.clickloginbutton();
-		dashBoardPage=loginPage.validlogin();
+		accountPage=loginPage.validlogin();
 		System.out.println(" Login Successfully");
 	}
 	
