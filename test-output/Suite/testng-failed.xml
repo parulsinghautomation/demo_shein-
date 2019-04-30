@@ -2,18 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="sheinUtility.ExtentReportListener"/>
+    <listener class-name="sheinUtility.EventListner"/>
   </listeners>
   <test thread-count="5" name="SheinTestResults(failed)">
     <classes>
-      <class name="sheinTest.HomeTest">
+      <class name="sheinTest.LoginTest">
         <methods>
           <include name="afterClass"/>
           <include name="returntoHomePage"/>
-          <include name="verifyHomePageDetails"/>
+          <include name="suiteTest"/>
+          <include name="verifyloginPageTitle"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- sheinTest.HomeTest -->
+      </class> <!-- sheinTest.LoginTest -->
     </classes>
   </test> <!-- SheinTestResults(failed) -->
 </suite> <!-- Failed suite [Suite] -->

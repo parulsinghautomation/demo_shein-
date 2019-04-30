@@ -54,7 +54,7 @@ public class Searchresultpage extends BasePage{
 	private WebElement results;
 	
 	
-   public boolean isSeachedItem(String item) {
+   public boolean isSearchedItem(String item) {
 	   boolean found = false;
 	   {
 		   if( results.getAttribute("data-id").contains(item))

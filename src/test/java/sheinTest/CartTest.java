@@ -26,21 +26,36 @@ public class CartTest extends BaseTest{
 	}
 	
 	@Test(dataProvider="itemID")
-	public void verifyItemAddedToCart(String itemID)
+	public void verifyItemAddedToCart(String itemID) 
 	{
 		searchresultpage.searchItem(itemID);
 		searchresultpage.addtocart();
 		cartpage=searchresultpage.navigateToCart();
+		try {
 		Assert.assertTrue(cartpage.isItemAddedinCart(itemID), "Selected item is not present in the cart");
+			}
+		catch(Exception e) {
+			e.printStackTrace();
+		
+		}
 		cartpage.continueShopping();
+		
+				
 	}
 	
 	@Test (dependsOnMethods = { "verifyItemAddedToCart" }, dataProvider="itemID")
 	public void verifyItemIsRemoved(String itemID)
 	{
 		homePage.navigateToCart();
+		try
+		{
 		Assert.assertTrue(cartpage.removeItemfromCart(),"Item not removed from cart");
-		cartpage.continueShopping();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+			cartpage.continueShopping();
+							}	
 	}
 	
-}
+

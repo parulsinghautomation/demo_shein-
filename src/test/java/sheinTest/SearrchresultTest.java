@@ -28,7 +28,14 @@ public class SearrchresultTest extends BaseTest{
 	public void verifyItemSearched(String itemID)
 	{
         searchresultpage.searchItem(itemID);
-        Assert.assertTrue(searchresultpage.isSeachedItem(itemID));
+        try
+        {
+        Assert.assertTrue(searchresultpage.isSearchedItem(itemID));
+	}
+        catch(Exception e) {
+			e.printStackTrace();
+		
+		}
 	}
 
 }

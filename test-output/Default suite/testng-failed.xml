@@ -3,14 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sheinTest.HomeTest">
+      <class name="sheinTest.CartTest">
         <methods>
+          <include name="verifyItemIsRemoved"/>
           <include name="afterClass"/>
+          <include name="verifyItemAddedToCart"/>
           <include name="returntoHomePage"/>
-          <include name="verifyHomePageDetails"/>
+          <include name="verifySearchItem"/>
+          <include name="suiteTest"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- sheinTest.HomeTest -->
+      </class> <!-- sheinTest.CartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
