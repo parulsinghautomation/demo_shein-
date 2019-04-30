@@ -1,6 +1,5 @@
 package sheinTest;
 
-import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,5 +22,4 @@ public class AccountTest extends BaseTest
 		
 	}
 	
-
 }
