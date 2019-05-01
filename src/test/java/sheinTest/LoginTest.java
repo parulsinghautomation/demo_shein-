@@ -24,7 +24,7 @@ public class LoginTest extends BaseTest {
 		}
 	}
 	
-	@Test
+	@Test (dependsOnMethods = { "verifyloginPageTitle" })
 	public void verifyValidLogin() throws IOException
 	{
 		loginPage=homePage.clickloginbutton();

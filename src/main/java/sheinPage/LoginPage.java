@@ -11,6 +11,11 @@ public class LoginPage extends BasePage  {
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
+		
+		if (!driver.getTitle().equalsIgnoreCase("Sign In"))
+		{
+		      throw new IllegalStateException("Not on sign in page");
+		 }
 			}
 	
 	@FindBy(xpath="//div[@class='j-login-con col-xs-3 col-xs-offset-2']//input[@name='email']")
@@ -26,7 +31,7 @@ public class LoginPage extends BasePage  {
 
 	public AccountPage validlogin()
 	{	
-		System.out.println(pageDriver.getTitle());
+		
 		Username.sendKeys(configManager.property.getProperty("username"));
 		Password.sendKeys(configManager.property.getProperty("password"));
 		Submitbutton.click();

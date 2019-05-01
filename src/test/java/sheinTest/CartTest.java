@@ -34,13 +34,12 @@ public class CartTest extends BaseTest{
 		try {
 		Assert.assertTrue(cartpage.isItemAddedinCart(itemID), "Selected item is not present in the cart");
 			}
-		catch(Exception e) {
+		catch(Exception e) 
+		{
 			e.printStackTrace();
-		
-		}
+			}
 		cartpage.continueShopping();
-		
-				
+						
 	}
 	
 	@Test (dependsOnMethods = { "verifyItemAddedToCart" }, dataProvider="itemID")
@@ -52,10 +51,9 @@ public class CartTest extends BaseTest{
 		Assert.assertTrue(cartpage.removeItemfromCart(),"Item not removed from cart");
 		}
 		catch(Exception e) {
-			e.printStackTrace();
-		}
+			e.printStackTrace();							}
 			cartpage.continueShopping();
-							}	
+		}	
 	}
 	
 
