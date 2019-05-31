@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="SheinTestResults(failed)">
     <classes>
-      <class name="sheinTest.LoginTest">
+      <class name="sheinTest.HomeTest">
         <methods>
           <include name="afterClass"/>
           <include name="returntoHomePage"/>
           <include name="suiteTest"/>
-          <include name="verifyloginPageTitle"/>
+          <include name="verifyHomePageDetails"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- sheinTest.LoginTest -->
+      </class> <!-- sheinTest.HomeTest -->
     </classes>
   </test> <!-- SheinTestResults(failed) -->
 </suite> <!-- Failed suite [Suite] -->

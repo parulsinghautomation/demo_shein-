@@ -1,59 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+<testng-results skipped="0" failed="0" ignored="4" total="14" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="97573" started-at="2019-05-01T07:03:02Z" finished-at="2019-05-01T07:04:40Z">
+  <suite name="Suite" duration-ms="293269" started-at="2019-05-31T11:07:24Z" finished-at="2019-05-31T11:12:17Z">
     <groups>
     </groups>
-    <test name="SheinTestResults" duration-ms="97573" started-at="2019-05-01T07:03:02Z" finished-at="2019-05-01T07:04:40Z">
+    <test name="SheinTestResults" duration-ms="293269" started-at="2019-05-31T11:07:24Z" finished-at="2019-05-31T11:12:17Z">
       <class name="sheinTest.LoginTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:sheinTest.LoginTest@7276c8cd]" name="beforeClass" is-config="true" duration-ms="36109" started-at="2019-05-01T07:03:49Z" finished-at="2019-05-01T07:04:25Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:sheinTest.LoginTest@46238e3f]" name="beforeClass" is-config="true" duration-ms="19936" started-at="2019-05-31T11:08:02Z" finished-at="2019-05-31T11:08:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="verifyloginPageTitle()[pri:0, instance:sheinTest.LoginTest@7276c8cd]" name="verifyloginPageTitle" duration-ms="3050" started-at="2019-05-01T07:04:25Z" finished-at="2019-05-01T07:04:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyloginPageTitle -->
-        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.LoginTest@7276c8cd]" name="returntoHomePage" is-config="true" duration-ms="3406" started-at="2019-05-01T07:04:28Z" finished-at="2019-05-01T07:04:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- returntoHomePage -->
-        <test-method status="PASS" signature="verifyValidLogin()[pri:0, instance:sheinTest.LoginTest@7276c8cd]" name="verifyValidLogin" duration-ms="4872" started-at="2019-05-01T07:04:31Z" depends-on-methods="sheinTest.LoginTest.verifyloginPageTitle" finished-at="2019-05-01T07:04:36Z">
+        <test-method status="PASS" signature="verifyValidLogin()[pri:0, instance:sheinTest.LoginTest@46238e3f]" name="verifyValidLogin" duration-ms="6836" started-at="2019-05-31T11:08:22Z" finished-at="2019-05-31T11:08:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidLogin -->
-        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.LoginTest@7276c8cd]" name="returntoHomePage" is-config="true" duration-ms="2866" started-at="2019-05-01T07:04:36Z" finished-at="2019-05-01T07:04:39Z">
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.LoginTest@46238e3f]" name="returntoHomePage" is-config="true" duration-ms="5158" started-at="2019-05-31T11:08:28Z" finished-at="2019-05-31T11:08:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- returntoHomePage -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:sheinTest.LoginTest@7276c8cd]" name="afterClass" is-config="true" duration-ms="909" started-at="2019-05-01T07:04:39Z" finished-at="2019-05-01T07:04:40Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:sheinTest.LoginTest@46238e3f]" name="afterClass" is-config="true" duration-ms="1340" started-at="2019-05-31T11:08:34Z" finished-at="2019-05-31T11:08:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- sheinTest.LoginTest -->
-      <class name="sheinTest.HomeTest">
-        <test-method status="PASS" signature="suiteTest()[pri:0, instance:sheinTest.HomeTest@64485a47]" name="suiteTest" is-config="true" duration-ms="13" started-at="2019-05-01T07:03:02Z" finished-at="2019-05-01T07:03:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- suiteTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:sheinTest.HomeTest@64485a47]" name="beforeClass" is-config="true" duration-ms="39295" started-at="2019-05-01T07:03:02Z" finished-at="2019-05-01T07:03:42Z">
+      <class name="sheinTest.CartTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="beforeClass" is-config="true" duration-ms="18362" started-at="2019-05-31T11:10:11Z" finished-at="2019-05-31T11:10:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="verifyHomePageDetails()[pri:0, instance:sheinTest.HomeTest@64485a47]" name="verifyHomePageDetails" duration-ms="3571" started-at="2019-05-01T07:03:42Z" finished-at="2019-05-01T07:03:45Z">
+        <test-method status="PASS" signature="verifySearchItem()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="verifySearchItem" is-config="true" duration-ms="17327" started-at="2019-05-31T11:10:29Z" finished-at="2019-05-31T11:10:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomePageDetails -->
-        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.HomeTest@64485a47]" name="returntoHomePage" is-config="true" duration-ms="2355" started-at="2019-05-01T07:03:45Z" finished-at="2019-05-01T07:03:48Z">
+        </test-method> <!-- verifySearchItem -->
+        <test-method status="PASS" signature="verifyItemAddedToCart(java.lang.String)[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="verifyItemAddedToCart" duration-ms="15194" started-at="2019-05-31T11:10:47Z" data-provider="itemID" finished-at="2019-05-31T11:11:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[654595]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyItemAddedToCart -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="returntoHomePage" is-config="true" duration-ms="4570" started-at="2019-05-31T11:11:02Z" finished-at="2019-05-31T11:11:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- returntoHomePage -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:sheinTest.HomeTest@64485a47]" name="afterClass" is-config="true" duration-ms="983" started-at="2019-05-01T07:03:48Z" finished-at="2019-05-01T07:03:49Z">
+        <test-method status="PASS" signature="verifyItemAddedToCart(java.lang.String)[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="verifyItemAddedToCart" duration-ms="15203" started-at="2019-05-31T11:11:06Z" data-provider="itemID" finished-at="2019-05-31T11:11:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[375255]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyItemAddedToCart -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="returntoHomePage" is-config="true" duration-ms="6100" started-at="2019-05-31T11:11:22Z" finished-at="2019-05-31T11:11:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returntoHomePage -->
+        <test-method status="PASS" signature="verifyItemIsRemoved(java.lang.String)[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="verifyItemIsRemoved" duration-ms="12373" started-at="2019-05-31T11:11:28Z" data-provider="itemID" depends-on-methods="sheinTest.CartTest.verifyItemAddedToCart" finished-at="2019-05-31T11:11:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[654595]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyItemIsRemoved -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="returntoHomePage" is-config="true" duration-ms="4549" started-at="2019-05-31T11:11:40Z" finished-at="2019-05-31T11:11:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returntoHomePage -->
+        <test-method status="PASS" signature="verifyItemIsRemoved(java.lang.String)[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="verifyItemIsRemoved" duration-ms="11886" started-at="2019-05-31T11:11:45Z" data-provider="itemID" depends-on-methods="sheinTest.CartTest.verifyItemAddedToCart" finished-at="2019-05-31T11:11:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[375255]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyItemIsRemoved -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="returntoHomePage" is-config="true" duration-ms="4403" started-at="2019-05-31T11:11:57Z" finished-at="2019-05-31T11:12:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returntoHomePage -->
+        <test-method status="PASS" signature="verifyCartIsEmpty()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="verifyCartIsEmpty" duration-ms="9694" started-at="2019-05-31T11:12:01Z" depends-on-methods="sheinTest.CartTest.verifyItemIsRemoved" finished-at="2019-05-31T11:12:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartIsEmpty -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="returntoHomePage" is-config="true" duration-ms="4783" started-at="2019-05-31T11:12:11Z" finished-at="2019-05-31T11:12:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returntoHomePage -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:sheinTest.CartTest@4e4aea35]" name="afterClass" is-config="true" duration-ms="1459" started-at="2019-05-31T11:12:16Z" finished-at="2019-05-31T11:12:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- sheinTest.CartTest -->
+      <class name="sheinTest.HomeTest">
+        <test-method status="PASS" signature="suiteTest()[pri:0, instance:sheinTest.HomeTest@7181ae3f]" name="suiteTest" is-config="true" duration-ms="9" started-at="2019-05-31T11:07:24Z" finished-at="2019-05-31T11:07:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:sheinTest.HomeTest@7181ae3f]" name="beforeClass" is-config="true" duration-ms="23440" started-at="2019-05-31T11:07:24Z" finished-at="2019-05-31T11:07:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verifyHomePageDetails()[pri:0, instance:sheinTest.HomeTest@7181ae3f]" name="verifyHomePageDetails" duration-ms="6713" started-at="2019-05-31T11:07:47Z" finished-at="2019-05-31T11:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageDetails -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.HomeTest@7181ae3f]" name="returntoHomePage" is-config="true" duration-ms="6425" started-at="2019-05-31T11:07:54Z" finished-at="2019-05-31T11:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returntoHomePage -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:sheinTest.HomeTest@7181ae3f]" name="afterClass" is-config="true" duration-ms="1227" started-at="2019-05-31T11:08:00Z" finished-at="2019-05-31T11:08:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- sheinTest.HomeTest -->
+      <class name="sheinTest.AccountTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:sheinTest.AccountTest@6e2c9341]" name="beforeClass" is-config="true" duration-ms="17458" started-at="2019-05-31T11:08:35Z" finished-at="2019-05-31T11:08:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verifyAccountLink()[pri:0, instance:sheinTest.AccountTest@6e2c9341]" name="verifyAccountLink" duration-ms="21634" started-at="2019-05-31T11:08:52Z" finished-at="2019-05-31T11:09:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccountLink -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.AccountTest@6e2c9341]" name="returntoHomePage" is-config="true" duration-ms="7318" started-at="2019-05-31T11:09:14Z" finished-at="2019-05-31T11:09:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returntoHomePage -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:sheinTest.AccountTest@6e2c9341]" name="afterClass" is-config="true" duration-ms="1405" started-at="2019-05-31T11:09:21Z" finished-at="2019-05-31T11:09:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- sheinTest.AccountTest -->
+      <class name="sheinTest.SearrchresultTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:sheinTest.SearrchresultTest@32464a14]" name="beforeClass" is-config="true" duration-ms="17744" started-at="2019-05-31T11:09:23Z" finished-at="2019-05-31T11:09:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="verifySearchItem()[pri:0, instance:sheinTest.SearrchresultTest@32464a14]" name="verifySearchItem" is-config="true" duration-ms="16007" started-at="2019-05-31T11:09:41Z" finished-at="2019-05-31T11:09:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearchItem -->
+        <test-method status="PASS" signature="verifyItemSearched(java.lang.String)[pri:0, instance:sheinTest.SearrchresultTest@32464a14]" name="verifyItemSearched" duration-ms="1508" started-at="2019-05-31T11:09:57Z" data-provider="itemID" finished-at="2019-05-31T11:09:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[375255]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyItemSearched -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.SearrchresultTest@32464a14]" name="returntoHomePage" is-config="true" duration-ms="4880" started-at="2019-05-31T11:09:58Z" finished-at="2019-05-31T11:10:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returntoHomePage -->
+        <test-method status="PASS" signature="verifyItemSearched(java.lang.String)[pri:0, instance:sheinTest.SearrchresultTest@32464a14]" name="verifyItemSearched" duration-ms="1226" started-at="2019-05-31T11:10:03Z" data-provider="itemID" finished-at="2019-05-31T11:10:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[654595]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyItemSearched -->
+        <test-method status="PASS" signature="returntoHomePage()[pri:0, instance:sheinTest.SearrchresultTest@32464a14]" name="returntoHomePage" is-config="true" duration-ms="5179" started-at="2019-05-31T11:10:04Z" finished-at="2019-05-31T11:10:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- returntoHomePage -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:sheinTest.SearrchresultTest@32464a14]" name="afterClass" is-config="true" duration-ms="1512" started-at="2019-05-31T11:10:09Z" finished-at="2019-05-31T11:10:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- sheinTest.SearrchresultTest -->
     </test> <!-- SheinTestResults -->
   </suite> <!-- Suite -->
 </testng-results>

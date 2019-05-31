@@ -1,24 +1,18 @@
 package sheinTest;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AccountTest extends BaseTest 
 
 {
 	@Test
-	public void verifyAcoountLink() 
+	public void verifyAccountLink()
 	{
 		loginPage=homePage.clickloginbutton();
 		accountPage=loginPage.validlogin();
-		try {
-		Assert.assertTrue(accountPage.isAccountLinkPresent(), "Account link not present on this page");
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		
-		}
-		searchresultpage= accountPage.searchButton();
+		accountPage.isAccountLinkPresent();
+		accountPage.isSearchButtonPresent();
+		searchresultPage= accountPage.searchButton();
 		
 	}
 	

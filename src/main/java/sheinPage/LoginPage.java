@@ -3,6 +3,7 @@ package sheinPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import sheinUtility.configManager;
 
@@ -28,13 +29,13 @@ public class LoginPage extends BasePage  {
 	@FindBy(xpath="//div[@class='sign-in-btn-wrapper']//button[@class='she-btn-black she-btn-l she-btn-block'][contains(text(),'Sign In')]")
 	protected WebElement Submitbutton;
 	
-
+	
 	public AccountPage validlogin()
-	{	
-		
+	{			
 		Username.sendKeys(configManager.property.getProperty("username"));
 		Password.sendKeys(configManager.property.getProperty("password"));
-		Submitbutton.click();
+		Assert.assertTrue(Submitbutton.isDisplayed(),"Unable to find submit button");
+		javascriptClick(Submitbutton);
 		return new AccountPage(pageDriver);
 	
 	}

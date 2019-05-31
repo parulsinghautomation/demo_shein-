@@ -6,13 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BasePage {
 	protected WebDriver pageDriver;
 	
-	@FindBy(xpath="//a[@class='iconfont-critical icon-sheinlogo']")
-	protected WebElement sheinlogo;
+	@FindBy(xpath="//a[@href='https://www.shein.in']")
+	protected WebElement home;
 	
 	@FindBy(xpath = "//i[@class='iconfont-critical icon-yonghuicon-']")
 	protected WebElement options;
@@ -34,27 +36,43 @@ public class BasePage {
 
 	public void javascriptClick(WebElement element)
 	{
+		WebDriverWait wait = new WebDriverWait(pageDriver, 200);
+		wait.until(ExpectedConditions.visibilityOf(element));
+			
 		try {
 		JavascriptExecutor executor = (JavascriptExecutor)pageDriver;
-		executor.executeScript("arguments[0].click();", element);}
+		executor.executeScript("arguments[0].click()", element);}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void javascriptMoveToElement(WebElement element)
+	{
+		WebDriverWait wait = new WebDriverWait(pageDriver, 200);
+		wait.until(ExpectedConditions.visibilityOf(element));
+			
+		try {
+		JavascriptExecutor executor = (JavascriptExecutor)pageDriver;
+		executor.executeScript("arguments[0].scrollIntoView(true);", element);}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public CartPage navigateToCart()
-	{
+	{	
 		Cartbutton.click();
 		return new CartPage(pageDriver);
 		
 	}
 	public HomePage returntoHomePage() 
 	{
-		sheinlogo.click();
+		home.click();
 		return new HomePage(pageDriver);
 	}
 	
-	}
+}
 	
 
 

@@ -1,25 +1,24 @@
 package sheinPage;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import org.testng.Assert;
 
 public class Searchresultpage extends BasePage{
 
 	public Searchresultpage(WebDriver driver) {
 		super(driver);
+//		WebDriverWait wait = new WebDriverWait(driver, 100);
+//		wait.until(ExpectedConditions.visibilityOf(product));
 		if (!driver.getTitle().contains("Search"))
 		{
 		      throw new IllegalStateException("Not on Search page");
-		 }
-		WebDriverWait wait = new WebDriverWait(driver, 100);
-		wait.until(ExpectedConditions.visibilityOf(product));
-		
+		 }			
 		}
 
-	
 	@FindBy(xpath ="//div[contains(@class,'gds-li-ratiowrap')]//img[contains(@class,'j-verlok-lazy loaded')]")
 	protected WebElement itemImage;
 	
@@ -35,7 +34,7 @@ public class Searchresultpage extends BasePage{
 	@FindBy(xpath ="//label[3]//span[1]")
 	protected WebElement size;
 	
-	@FindBy(xpath ="//button[contains(@class,'add-bag-submit')]")
+	@FindBy(xpath ="(//button[contains(text(),'Submit')])[1]")
 	protected WebElement selectitem;
 	
 	
@@ -55,37 +54,34 @@ public class Searchresultpage extends BasePage{
 	
 	
    public boolean isSearchedItem(String item) {
-	   boolean found = false;
-	   {
-		   if( results.getAttribute("data-id").contains(item))
-		   {
-			System.out.println(item + "Found");   
-			 return true;
-		   }
-		   
-	   }
-	   if(!found) {
-		   
-		   System.out.println("Item not found in search");
-		   
-	   }
-	   return found;
-   }
+	   	 Assert.assertTrue(results.getAttribute("data-id").contains(item) , item + "Found");
+		 return true;}
 	
-	
-	public void searchItem(String itemID)
+	public void searchItem(String itemID) throws InterruptedException
 	{
 		search.clear();
 		search.sendKeys(itemID);
-		submitsearch.click();
+		javascriptClick(submitsearch);
+		Thread.sleep(1000);
 	}
 	
-	public void addtocart()
+	public void addtocart() throws InterruptedException
 	{
-		
 		Actions act = new Actions(pageDriver);
-		act.moveToElement(itemImage).perform();
-		item.click();
+		Thread.sleep(3000);
+		for(int i=0;i<=5;i++) {
+			act.moveToElement(itemImage).perform();
+			try {
+				item.click();
+				break;
+				
+			} catch (ElementNotInteractableException e) {
+				Thread.sleep(2000);
+				continue;
+			}
+		}
+		
+//		javascriptMoveToElement(itemImage);
 		size.click();
 		selectitem.click();
 	}

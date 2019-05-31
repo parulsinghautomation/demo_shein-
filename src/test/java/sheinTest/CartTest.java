@@ -4,56 +4,52 @@ package sheinTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.Assert;
 
 public class CartTest extends BaseTest{
 	
-	@BeforeClass
+	@BeforeClass 
 	public void verifySearchItem()
 	{
 		loginPage=homePage.clickloginbutton();
 		accountPage=loginPage.validlogin();
-        searchresultpage= accountPage.searchButton();
+        searchresultPage= accountPage.searchButton();
 	}
 	
 	@DataProvider
 	public String[] itemID()
 	{
-		String itemId = "375255";
-		String itemId1 = "654595";
+		String itemId = "654595";
+		String itemId1 = "375255";
 		
 	return new String[] {itemId,itemId1};
 	}
 	
 	@Test(dataProvider="itemID")
-	public void verifyItemAddedToCart(String itemID) 
+	public void verifyItemAddedToCart(String itemID) throws InterruptedException 
 	{
-		searchresultpage.searchItem(itemID);
-		searchresultpage.addtocart();
-		cartpage=searchresultpage.navigateToCart();
-		try {
-		Assert.assertTrue(cartpage.isItemAddedinCart(itemID), "Selected item is not present in the cart");
-			}
-		catch(Exception e) 
-		{
-			e.printStackTrace();
-			}
-		cartpage.continueShopping();
+		searchresultPage.searchItem(itemID);
+		searchresultPage.addtocart();
+		cartPage=searchresultPage.navigateToCart();		
+		cartPage.isItemAddedinCart(itemID);
+		cartPage.continueShopping();
 						
 	}
 	
 	@Test (dependsOnMethods = { "verifyItemAddedToCart" }, dataProvider="itemID")
-	public void verifyItemIsRemoved(String itemID)
+	public void verifyItemIsRemoved(String item) throws InterruptedException
 	{
 		homePage.navigateToCart();
-		try
-		{
-		Assert.assertTrue(cartpage.removeItemfromCart(),"Item not removed from cart");
-		}
-		catch(Exception e) {
-			e.printStackTrace();							}
-			cartpage.continueShopping();
-		}	
+		cartPage.removeItemfromCart();
+		cartPage.continueShopping();
+	}	
+	
+	@Test(dependsOnMethods = { "verifyItemIsRemoved" })
+	public void verifyCartIsEmpty()
+	{
+		homePage.navigateToCart();
+		cartPage.isCartEmpty();
+		cartPage.continueShopping();
 	}
 	
 
+}

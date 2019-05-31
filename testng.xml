@@ -9,7 +9,7 @@
     <classes>
       <class name="sheinTest.HomeTest"/>
       <class name="sheinTest.LoginTest"/>
-      <class name="sheinTest.AccountTest"/>
+	  <class name="sheinTest.AccountTest"/>
       <class name="sheinTest.SearrchresultTest"/>
       <class name="sheinTest.CartTest"/>
     </classes>

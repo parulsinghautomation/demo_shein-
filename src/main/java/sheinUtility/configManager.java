@@ -14,6 +14,7 @@ public static Properties property=new Properties();
 		FileReader fr=new FileReader("Config.properties");
 		property.load(fr);
 		property.get("url");
+		property.get("browser");
 		
 		
 	}
